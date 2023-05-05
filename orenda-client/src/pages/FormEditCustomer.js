@@ -108,7 +108,11 @@ const FormEditCustomer = () => {
           </div>
         </div>
         <div className="w-full p-4 flex gap-4 justify-end">
-          <Button variant="outlined" onClick={handleClick}>
+          <Button
+            variant="outlined"
+            onClick={handleClick}
+            disabled={Object.values(form).some((item) => item === "")}
+          >
             Update
           </Button>
         </div>

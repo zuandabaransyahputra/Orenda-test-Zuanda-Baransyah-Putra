@@ -108,7 +108,11 @@ const FormAddCustomer = () => {
           <Button variant="outlined" onClick={handleCancel}>
             Cancel
           </Button>
-          <Button variant="outlined" onClick={handleClick}>
+          <Button
+            variant="outlined"
+            onClick={handleClick}
+            disabled={Object.values(form).some((item) => item === "")}
+          >
             Create New
           </Button>
         </div>
